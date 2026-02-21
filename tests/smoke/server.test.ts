@@ -1,8 +1,12 @@
 // Copyright (c) 2026 84EM LLC (https://84em.io). MIT License.
 
+import { resolve } from 'node:path';
 import { describe, it, expect, afterEach } from 'vitest';
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
+
+const projectRoot = resolve(import.meta.dirname, '../..');
+const tsxBin = resolve(projectRoot, 'node_modules/.bin/tsx');
 
 describe('MCP server smoke test', { timeout: 15_000 }, () => {
   let client: Client | null = null;
@@ -23,9 +27,9 @@ describe('MCP server smoke test', { timeout: 15_000 }, () => {
 
   it('starts and responds to tools/list with 28 tools', async () => {
     transport = new StdioClientTransport({
-      command: 'npx',
-      args: ['tsx', 'src/index.ts'],
-      cwd: '/home/andrew/workspace/mcp-sevalla',
+      command: tsxBin,
+      args: ['src/index.ts'],
+      cwd: projectRoot,
       env: {
         ...process.env,
         SEVALLA_API_KEY: 'smoke-test-key',
