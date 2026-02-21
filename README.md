@@ -152,9 +152,13 @@ Tool access depends on the API key's role. See the [Sevalla/Kinsta user roles an
 ## Development
 
 ```bash
-npm run build    # Compile TypeScript to dist/
-npm run dev      # Watch mode with tsx
-npm start        # Run compiled server
+npm run build        # Compile TypeScript to dist/
+npm run dev          # Watch mode with tsx
+npm start            # Run compiled server
+npm test             # Run all tests
+npm run test:unit    # Unit tests only
+npm run test:dry-run # Dry-run tests (no API calls)
+npm run test:smoke   # Smoke test (server startup)
 ```
 
 ## Contributing
