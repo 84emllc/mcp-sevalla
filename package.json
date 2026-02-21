@@ -1,5 +1,6 @@
 {
   "name": "mcp-sevalla",
+  "private": true,
   "version": "1.0.0",
   "description": "MCP server for Sevalla cloud hosting API",
   "type": "module",
