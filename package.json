@@ -10,7 +10,13 @@
   "scripts": {
     "build": "rm -rf dist && tsc && chmod +x dist/index.js",
     "dev": "tsx watch src/index.ts",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:unit": "vitest run tests/unit/",
+    "test:dry-run": "vitest run tests/dry-run/",
+    "test:integration": "vitest run tests/integration/",
+    "test:smoke": "vitest run tests/smoke/"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
@@ -19,7 +25,8 @@
   "devDependencies": {
     "@types/node": "^25.3.0",
     "tsx": "^4.19.0",
-    "typescript": "^5.7.0"
+    "typescript": "^5.7.0",
+    "vitest": "^3.2.4"
   },
   "keywords": [
     "mcp",
