@@ -1,0 +1,32 @@
+{
+  "name": "mcp-sevalla",
+  "version": "1.0.0",
+  "description": "MCP server for Sevalla cloud hosting API",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-sevalla": "dist/index.js"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc && chmod +x dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "keywords": [
+    "mcp",
+    "sevalla",
+    "cloud",
+    "hosting"
+  ],
+  "author": "84em.io",
+  "license": "MIT"
+}
