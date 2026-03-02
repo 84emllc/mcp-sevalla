@@ -7,13 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
+## [1.0.1] - 2026-03-02
 
+### Fixed
+- clearCache API call missing empty JSON body, causing 400 error
+
+### Added
 - GitHub Actions CI workflow with 4 parallel jobs: typecheck, test, build, security audit
 - Comprehensive vitest test suite: 74 tests across 17 files (unit, dry-run, smoke, integration)
 
 ### Changed
-
 - Refactored src/index.ts into src/handler.ts and src/tools.ts for testability
 
 ## [1.0.0] - 2026-02-21

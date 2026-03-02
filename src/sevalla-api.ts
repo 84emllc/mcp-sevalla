@@ -162,7 +162,7 @@ export class SevallaAPI {
   }
 
   async clearCache(appId: string): Promise<unknown> {
-    return this.request<unknown>('POST', `/applications/${appId}/clear-cache`);
+    return this.request<unknown>('POST', `/applications/${appId}/clear-cache`, {});
   }
 
   // --- Deployments ---
